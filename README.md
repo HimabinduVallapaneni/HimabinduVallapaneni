@@ -239,15 +239,15 @@ Observability  Monitoring • Alerting • Logging • RCA • (Prometheus • G
 
 ### Building automated platforms that make software delivery easier, safer, and more reliable.
 
-**Cloud • Kubernetes • Infrastructure as Code • CI/CD • GitOps • Reliability • Security**
+
 
 </div>
 
 <div align="center">
 
-![Himabindu Vallapaneni - DevOps & Platform Engineer](security-banner.png)
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge\&logo=linkedin\&logoColor=white)](https://www.linkedin.com/in/himabindu-v-12ba84282)
 [![Projects](https://img.shields.io/badge/GitHub-Explore_Projects-181717?style=for-the-badge\&logo=github\&logoColor=white)](https://github.com/HimabinduVallapaneni?tab=repositories)
 [![Profile Views](https://komarev.com/ghpvc/?username=HimabinduVallapaneni\&label=Profile+Views\&color=2563EB\&style=for-the-badge)](https://github.com/HimabinduVallapaneni)
+
 </div>
