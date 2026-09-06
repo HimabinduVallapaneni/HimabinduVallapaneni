@@ -50,16 +50,7 @@ The project combines application validation, CI/CD automation, container enginee
 
 ### Platform Capabilities
 
-* ✅ GitHub Actions CI/CD automation
-* ✅ Automated testing and code-quality validation
-* ✅ Reproducible Node.js builds with `npm ci`
-* ✅ Multi-stage Docker builds
-* ✅ Container vulnerability scanning with Trivy
-* ✅ Security gates for critical/high vulnerabilities
-* ✅ Container publishing to GitHub Container Registry
-* ✅ Immutable image tagging using Git commit SHA
-* ✅ Automated Kubernetes manifest updates
-* ✅ Git-managed deployment configuration
+✅ GitHub Actions CI/CD automation | ✅ Automated testing and code-quality validation | ✅ Reproducible Node.js builds with `npm ci` | ✅ Multi-stage Docker builds | ✅ Container vulnerability scanning with Trivy | ✅ Security gates for critical/high vulnerabilities | ✅ Container publishing to GitHub Container Registry | ✅ Immutable image tagging using Git commit SHA | ✅ Automated Kubernetes manifest updates | ✅ Git-managed deployment configuration
 
 
 ### Delivery Architecture
@@ -71,37 +62,15 @@ Developer
 Git Push / Pull Request
     │
     ▼
-┌─────────────────────┐
-│      CI Pipeline    │
-│ Test • Lint • Build │
-└──────────┬──────────┘
-           ▼
-┌─────────────────────┐
-│   Container Build   │
-│  Multi-stage Docker │
-└──────────┬──────────┘
-           ▼
-┌─────────────────────┐
-│   Security Gate     │
-│       Trivy         │
-└──────────┬──────────┘
-           ▼
-┌─────────────────────┐
-│        GHCR         │
-│ Immutable SHA Image │
-└──────────┬──────────┘
-           ▼
-┌─────────────────────┐
-│ Kubernetes Manifest │
-│   Image Tag Update  │
-└──────────┬──────────┘
-           ▼
-       Argo CD
-      (Next Phase)
-           │
-           ▼
-      Kubernetes
-        on AWS
+┌─────────────────────┐   ┌─────────────────────┐   ┌─────────────────────┐   ┌─────────────────────┐  ┌─────────────────────┐
+│      CI Pipeline    │   │   Container Build   │   │   Security Gate     │   │        GHCR         │  │ Kubernetes Manifest │
+│ Test • Lint • Build │   │  Multi-stage Docker │   │       Trivy         │   │ Immutable SHA Image │  │   Image Tag Update  │
+└─────────────────────┘   └─────────────────────┘   └─────────────────────┘   └─────────────────────┘  └──────────┬──────────┘
+                                                                                                                  ▼
+                                                                                                                Argo CD  
+                                                                                                                  │
+                                                                                                                  ▼
+                                                                                                              Kubernetes                                                       
 ```
 
 **Automation · Containers · Kubernetes · GitOps · Security**
@@ -130,34 +99,6 @@ A hands-on **Infrastructure-as-Code project** demonstrating automated provisioni
 
 
 ### Infrastructure Flow
-
-```text
-CloudFormation
-      │
-      ▼
-     VPC
-      │
-      ▼
-   Subnets
-      │
-      ▼
-Internet Gateway
-      │
-      ▼
-Route Tables
-      │
-      ▼
- NACL + Security
-      │
-      ▼
-     EC2
-      │
-      ▼
-Launch Template
-      │
-      ▼
-Auto Scaling Group
-```
 
 **Infrastructure as Code · Networking · Compute · Security · Scaling**
 
@@ -189,28 +130,7 @@ Rather than treating security as a separate final stage, the project integrates 
 ### Secure Developer Workflow
 
 ```text
-Developer
-    │
-    ▼
-Git / Pull Request
-    │
-    ▼
-Secret Scanning
-    │
-    ▼
-SAST + SCA
-    │
-    ▼
-CI/CD Security Gates
-    │
-    ▼
-Container Security
-    │
-    ▼
-Infrastructure Validation
-    │
-    ▼
-Secure Deployment
+Developer --> Git/Pull Request --> Secret SCanning --> SAST+SCA -->CI/CD Security Gates --> Container Security --> Infra Validation --> Secure Deployment
 ```
 
 The goal is to create a **repeatable paved road** where developers receive automated security feedback as part of their normal delivery workflow.
