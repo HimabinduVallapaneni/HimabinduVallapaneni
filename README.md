@@ -14,7 +14,7 @@
 
 ## 👩‍💻 About Me
 
-I am a **DevOps_Platform Engineer with 6+ years of IT experience (3+ yeras of DevOps exp)** working across cloud infrastructure, CI/CD automation, Infrastructure as Code, containers, Kubernetes, security, and production operations.
+I am a **DevOps_Platform Engineer with 5+ years of experience working across cloud infrastructure, CI/CD automation, Infrastructure as Code, containers, Kubernetes, security, and production operations.
 
 --> My focus is building **reusable, automated platforms and delivery workflows** that reduce manual engineering effort and provide development teams with consistent ways to build, test, secure, deploy, and operate applications.
 
